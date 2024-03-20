@@ -236,6 +236,63 @@
 // }
 // console.log(res)
 
+// Уровень 2.1 задачника JavaScript
+// №1
+// Дана некоторая строка. Найдите позицию первого нуля в строке.
+// let str = 'dwfv04sdr0tewsd0f';
+// let arr = str.split('');
+// console.log(arr.indexOf('0'));
+
+
+// №4
+// Дан некоторый массив, например, вот такой:
+// [1, 2, 3, 4, 5, 6]
+// Найдите сумму первой половины элементов этого массива.
+// let arr = [1, 2, 3, 4, 5, 6];
+// let half_length = Math.ceil(arr.length / 2);    
+// let leftSide = arr.slice(0, half_length);
+// let res = leftSide.reduce((sum, current) => {
+//     return sum + current;
+// })
+// console.log(res)
+
+// №2
+// Дан массив с числами. Оставьте в нем только положительные числа.
+// let arr = [1, -2, 3, -4, 5, 6];
+// let res = [];
+// arr.forEach(el => {if(el > 0){
+//     res.push(el);
+// }})
+// console.log(res);
+
+// №3
+// Дана строка. Удалите предпоследний символ из этой строки.
+// let str = "stringify";
+// let res = str.slice(0, str.length - 2) + str.slice(str.length - 1);
+// console.log(res)
+
+// Уровень 2.3 задачника JavaScript
+// №1
+// Даны два слова. Проверьте, что последняя буква первого слова совпадает с первой буквой второго слова.
+// let str1 = 'Michael';
+// let str2 = 'Lion';
+// console.log(str1[str1.length - 1].toLowerCase() == str2[0].toLocaleLowerCase());
+
+// №4
+// Дана дата в следующем формате:
+// '2025-12-31'
+// Преобразуйте эту дату в следующий объект:
+// {
+// 	year: '2025',
+// 	month: '12',
+// 	day: '31',
+// }
+// let date = '2025-12-31';
+// let objDate = {};
+// // применяю деструктуризацию
+// [objDate.year, objDate.month, objDate.day] = date.split('-');
+// console.log(objDate);
+
 // Уровень 2.4 задачника JavaScript
 // №1
 // Дана некоторая строка с буквами и цифрами. Получите позицию первой цифры в этой строке.
@@ -243,7 +300,7 @@
 // let arr = str.split('');
 // let res = [];
 // arr.forEach(el => {
-//     if(!isNaN(Number(el))){
+//     if(!isNaN(el)){
 //         res.push(arr.indexOf(el));
 //     };
 // });
@@ -286,19 +343,18 @@
 // }
 // let res = arrOfsubArr.flat();
 // for(let i = 2; i < res.length; i += 4){
-//     res.splice(i + 1 , 0, ' ');
+//     res.splice(i + 1, 0, ' ');
 // }
-// console.log(res.join(''))
-
+// console.log(res.join(''));
 
 // Уровень 2.5 задачника JavaScript
 // №1
 // Дана некоторая строка, например, вот такая:
 // '023m0df0dfg0'
 // Получите массив позиций всех нулей в этой в строке.
-// let str = '023m0f0dg0';
-// let arr = str.split('');
-
+let str = '023m0f0dg0';
+let arr = str.split('');
+//нашел в нете функцию на поиск дубликатов и решил через нее
 // Array.prototype.getDuplicates = function () {
 //     let duplicates = [];
 //     for (let i = 0; i < this.length; i++) {
@@ -311,13 +367,15 @@
 //     return duplicates[0];
 // };
 // console.log(arr.getDuplicates());
-
-// Уровень 2.1 задачника JavaScript
-// №1
-// Дана некоторая строка. Найдите позицию первого нуля в строке.
-// let str = 'dwfv04sdr0tewsd0f';
-// let arr = str.split('');
-// console.log(arr.indexOf('0'));
+//написал сам
+// let res = [];
+// let obj = Object.assign({}, arr);
+// for(let key in obj){
+//     if(obj[key] === '0'){
+//         res.push(key);
+//     }
+// }
+// console.log(res);
 
 // №2
 // Дана некоторая строка:
@@ -331,23 +389,3 @@
 // }
 // console.log(arr.join(''))
 
-// №4
-// Дан некоторый массив, например, вот такой:
-// [1, 2, 3, 4, 5, 6]
-// Найдите сумму первой половины элементов этого массива.
-// let arr = [1, 2, 3, 4, 5, 6];
-// let half_length = Math.ceil(arr.length / 2);    
-// let leftSide = arr.slice(0, half_length);
-// let res = leftSide.reduce((sum, current) => {
-//     return sum + current;
-// })
-// console.log(res)
-
-// №2
-// Дан массив с числами. Оставьте в нем только положительные числа.
-// let arr = [1, -2, 3, -4, 5, 6];
-// let res = [];
-// arr.forEach(el => {if(el > 0){
-//     res.push(el);
-// }})
-// console.log(res);
