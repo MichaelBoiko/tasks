@@ -352,8 +352,8 @@
 // Дана некоторая строка, например, вот такая:
 // '023m0df0dfg0'
 // Получите массив позиций всех нулей в этой в строке.
-let str = '023m0f0dg0';
-let arr = str.split('');
+// let str = '023m0f0dg0';
+// let arr = str.split('');
 //нашел в нете функцию на поиск дубликатов и решил через нее
 // Array.prototype.getDuplicates = function () {
 //     let duplicates = [];
@@ -389,3 +389,115 @@ let arr = str.split('');
 // }
 // console.log(arr.join(''))
 
+// Уровень 2.6 задачника JavaScript
+// №1
+// Дана некоторая строка с буквами и цифрами. Получите массив позиций всех цифр из этой строки.
+// let str = 'edc3oih5oijh7hj8kj';
+// let arr = str.split('');
+// let obj = Object.assign({}, arr);
+// let res = [];
+// for(let key in obj){
+//     if(!isNaN(obj[key])){
+//         res.push(key);
+//     }
+// }
+// console.log(res);
+
+// №5
+// Дан некоторый массив с числами, например, вот такой:
+// [1, 2, 3, 4, 5, 6]
+// Слейте пары элементов вместе:
+// [12, 34, 56]
+// let arr = [1, 2, 3, 4, 5, 6];
+// let subArr = [];
+// for(let i = 0; i < arr.length; i+=2){
+//     subArr.push(+arr.slice(i, i + 2).join(''));
+// }
+// console.log(subArr)
+
+// Уровень 2.7 задачника JavaScript
+// №3
+// Дано некоторое число, например, такое:
+// 123789
+// Удалите из этого числа все нечетные цифры. В нашем случае получится такой результат:
+// 28
+// let num = 123789;
+// let str = num + '';
+// let arr = str.split('');
+// let res = arr.filter(el => el % 2 == 0);
+// console.log(res.join(''));
+
+// Уровень 2.9 задачника JavaScript
+// №1
+// Дано некоторое число:
+// 123456
+// Найдите сумму пар цифр этого числа. В нашем случае имеется ввиду следующее:
+// 12 + 34 + 56
+// let num = 123456;
+// let str = num + '';
+// let arr = str.split(''):
+// let subArr = [];
+// for(let i = 0; i < arr.length; i+=2){
+//     subArr.push(+arr.slice(i, i + 2).join(''));
+// }
+// let res = subArr.reduce((sum, current) => sum + current);
+// console.log(res);
+
+// Уровень 3.1 задачника JavaScript
+// №2
+// Дан массив:
+// [1, '', 2, 3, '', 5]
+// Удалите из массива все пустые строки.
+// let arr = [1, '', 2, 3, '', 5];
+// let res = arr.filter(el => el !== '');
+// console.log(res);
+
+// Уровень 3.2 задачника JavaScript
+// №3
+// Дана некоторая переменная с числом:
+// let num = 5;
+// Сделайте строку, содержащую столько нулей, сколько указано в переменной.
+//  В нашем случае получится такая строка:
+// '00000'
+// let num = 5;
+// let arr = [];
+// for(let i = 0; i < num; i++){
+//     arr.push(0);
+// }
+// console.log(arr.join(''))
+
+// Уровень 3.3 задачника JavaScript
+// №1
+// Дан массив со словами. Удалите из него слова, состоящие более чем из трех символов.
+// let arr = ['привет', 'как', 'дела', 'у', 'тебя'];
+// let res = arr.filter(el => {
+//     return el.length <= 3
+// })
+// console.log(res);
+
+// №2
+// Дано некоторое число:
+// 1357
+// Проверьте, что все цифры этого числа являются нечетными.
+// let num = 1357;
+// let flag;
+// let arr = num.toString().split('');
+// let res = arr.forEach(el => {
+//     if(el % 2 !== 0){
+//         flag = true;
+//     }
+// });
+// console.log(flag);
+
+// Уровень 3.4 задачника JavaScript
+// №1
+// Выведите в консоль все числа в промежутке от 10 до 100, у которых первая цифра четная.
+// let arrNum = [];
+// for(let i = 10; i <= 100; i++){
+//     arrNum.push(i + '');
+// }
+// arrNum.forEach(el => {
+//     if(el[0] % 2 == 0){
+//         console.log(el)
+//     }
+// })
