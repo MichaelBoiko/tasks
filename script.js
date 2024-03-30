@@ -501,3 +501,59 @@
 //         console.log(el)
 //     }
 // })
+
+// №2
+// Дан некоторый массив, например, вот такой:
+// [1, 2, 3, 4, 5, 6]
+// Поменяйте местами пары элементов этого массива:
+// [2, 1, 4, 3, 6, 5]
+// let arr = [1, 2, 3, 4, 5, 6];
+// let res = [];
+// for(let i = 0; i < arr.length; i += 2){
+//     res.push(arr.slice(i, i + 2).reverse());
+// }
+// console.log(res.flat());
+
+// Уровень 3.10 задачника JavaScript
+// №3
+// Даны два числа. Получите массив цифр, которые есть и в одном, и во втором числе.
+// let num1 = 12341;
+// let num2 = 54322;
+// let arr1 = (num1 + '').split('').map(function(digit){
+//     return +digit;
+//   });
+// let arr2 = (num2 + '').split('').map(function(digit){
+//     return +digit;
+//   });
+// let filteredArr = arr1.filter(arr1 => arr2.includes(arr1));
+// //убираю из массива повторяющиеся цифры
+// let res = filteredArr.filter((item, index) => {
+//     return filteredArr.indexOf(item) === index
+// });
+// console.log(res);
+
+// Уровень 4.1 задачника JavaScript
+// №1
+// Сделайте функцию, которая вернет текущий день недели словом.
+// function getDay(day){
+//     let days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вск'];
+//     switch(day){
+//         case 1:
+//             return days[0];
+//         case 2:
+//             return days[1];
+//         case 3:
+//             return days[2];
+//         case 4:
+//             return days[3];
+//         case 5:
+//             return days[4];
+//         case 6:
+//             return days[5];
+//         case 7:
+//             return days[6];
+//     }
+// }
+// console.log(getDay(5))
+
+

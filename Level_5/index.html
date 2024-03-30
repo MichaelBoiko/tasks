@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level_5</title>
+</head>
+<body>
+    <!-- Уровень 5.1 задачника JavaScript
+    Даны два инпута, абзац и кнопка. В инпуты вводятся числа.
+    По нажатию на кнопку выведите в абзац сумму этих чисел. -->
+    <div class="container">
+        <input type="text" id="input_1">
+        <input type="text" id="input_2">
+        <button type="button" id="btnSum">Сумма чисел</button>
+        <p id="output"></p>
+    </div>
+    <script>
+        let btn = document.querySelector('#btnSum');
+        let output = document.querySelector('#output');
+        let input_1 = document.querySelector('#input_1');
+        let input_2 = document.querySelector('#input_2');
+        btn.onclick = function(){
+            output.innerHTML = Number(input_1.value) + Number(input_2.value);
+        }
+    </script>
+</body>
+</html>
